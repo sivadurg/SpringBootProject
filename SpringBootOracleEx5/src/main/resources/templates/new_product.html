@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body style="text-align: center;">
+	<div align="center">
+		<h1>create new Product</h1><br>
+		<form action="#" th:action="@{/save}" th:object="${product}" method="post" >
+			<table border="0" style="height: 30%;">
+				<tr>
+					<td>Productname:</td>
+					<td><input type="text" th:field="*{name}" /></td>
+				</tr>
+				<tr>
+					<td>brand</td>
+					<td><input type="text" th:field="*{brand}" /></td>
+				</tr>
+				<tr>
+					<td>price</td>
+					<td><input type="number" th:field="*{price}" /></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><button type="submit">save</button></td>
+				</tr>
+			</table>
+		</form>
